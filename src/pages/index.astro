@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Info from "../components/Info.astro";
+import Projects from "../components/Projects.astro";
+
+const name = "Diego Rebollo";
+const subtitle = "Desarrollador Full Stack";
+const github = "https://www.linkedin.com/in/diegorebollo";
+const linkedin = "https://github.com/diegorebollo";
+const email = "diego@drebollo.com";
+---
+
+<Layout title=`${name} | ${subtitle}`>
+	<main>
+		<Info
+			name={name}
+			,
+			subtitle={subtitle}
+			,
+			github={github}
+			,
+			linkedin={linkedin}
+			,
+			email={email}
+		/>
+		<Projects />
+	</main>
+</Layout>
+
+<style>
+	main {
+		display: flex;
+		flex-direction: row;
+		/* gap: 10px; */
+		/* background-color: brown; */
+	}
+</style>

@@ -1,0 +1,17 @@
+{
+  "name": "drebollo-portfolio",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@fontsource-variable/raleway": "^5.0.18",
+    "astro": "^4.5.16",
+    "lucide-astro": "^0.365.0"
+  }
+}

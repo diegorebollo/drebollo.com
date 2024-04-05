@@ -1,0 +1,67 @@
+---
+import { Linkedin, Github, Mail } from "lucide-astro";
+
+interface Props {
+    name: string;
+    subtitle: string;
+    github: string;
+    linkedin: string;
+    email: string;
+}
+
+const { name, subtitle, github, linkedin, email } = Astro.props;
+---
+
+<div>
+    <h1>{name}</h1>
+    <h2>{subtitle}</h2>
+    <nav>
+        <ul>
+            <li>
+                <a href={github} target="_blank"><Github /></a>
+            </li>
+            <li>
+                <a href={linkedin} target="_blank"><Linkedin /></a>
+            </li>
+            <li>
+                <a href={email}><Mail /></a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<style>
+    div {
+        flex: 1;
+        border-right: 1px solid rgba(255, 255, 255, 0.158);
+
+        display: flex;
+        flex-direction: column;
+        /* background-color: aqua; */
+    }
+
+    h1 {
+        font-size: 10rem;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        /* font-size: 1rem; */
+        margin-bottom: 10px;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+    }
+</style>
