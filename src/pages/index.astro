@@ -4,7 +4,7 @@ import Info from "../components/Info.astro";
 import Projects from "../components/Projects.astro";
 
 const name = "Diego Rebollo";
-const subtitle = "Desarrollador Full Stack";
+const subtitle = "Full Stack Developer";
 const linkedin = "https://www.linkedin.com/in/diegorebollo";
 const github = "https://github.com/diegorebollo";
 const email = "diego@drebollo.com";
@@ -30,8 +30,12 @@ const email = "diego@drebollo.com";
 <style>
 	main {
 		display: flex;
-		flex-direction: row;
-		/* gap: 10px; */
+		max-width: 1360px;
 		/* background-color: brown; */
 	}
+
+	@media screen and (max-width: 1160px) {
+    main {
+        flex-direction: column;
+    }
 </style>

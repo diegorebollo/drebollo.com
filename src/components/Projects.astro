@@ -1,17 +1,52 @@
-<div>
-    <h3>Proyectos</h3>
-</div>
+---
+import Card from "../components/Card.astro";
+---
 
+<div class="container">
+    <div class="title-container"><h3>Projects</h3></div>
+    <Card
+        title="PicoPump"
+        description="A tool to trigger a relay using a water level sensor. Comes with a built in local web-server for configuring and monitoring."
+        tags={["Python", "Microcontroller"]}
+        links={[{'github': 'https://github.com/diegorebollo/PicoPump'}]}
+    />
 <style>
-    div {
+    .container {
         flex: 1;
         display: flex;
         flex-direction: column;
-        /* background-color: rgb(187, 255, 0); */
+        gap: 10px;
+        padding-left: 10px;
     }
 
     h3 {
-        margin-left: 10px;
-        /* background-color: aqua; */
+        margin-bottom: 8px;
+        font-size: 1.8rem;
+
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        width: 120px;
+        text-align: center;
+    }
+
+    .title-container {
+        display: flex;
+        width: 100%;
+    }
+
+    @media screen and (max-width: 1160px) {
+        .container {
+            padding-left: 0px;
+            align-items: center;
+        }
+
+        .title-container {
+            justify-content: center;
+        }
+    }
+
+    @media screen and (max-width: 623px) {
+    .title-container {
+        justify-content: left;
     }
 </style>

@@ -24,7 +24,7 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
                 <a href={linkedin} target="_blank"><Linkedin /></a>
             </li>
             <li>
-                <a href={email}><Mail /></a>
+                <a href=`mailto:${email}`><Mail /></a>
             </li>
         </ul>
     </nav>
@@ -37,7 +37,7 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
 
         display: flex;
         flex-direction: column;
-        /* background-color: aqua; */
+        overflow: hidden;
     }
 
     h1 {
@@ -48,7 +48,12 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
 
     h2 {
         font-size: 1.8rem;
+        color: rgb(0, 0, 0);
+        background-color: rgb(255, 255, 255);
+        width: 300px;
+        text-align: center;
     }
+
 
     h2 {
         /* font-size: 1rem; */
@@ -64,4 +69,22 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
         flex-direction: row;
         gap: 8px;
     }
+
+    @media screen and (max-width: 1160px) {
+    div {
+        border-right: 0;        
+        border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+    }
+
+    @media screen and (max-width: 1160px) {
+    ul {
+        margin-bottom: 8px;
+    }
+
+    @media screen and (max-width: 623px) {
+    h1 {
+        font-size: 6.5rem;
+    }
+
+
 </style>
