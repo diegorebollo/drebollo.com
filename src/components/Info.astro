@@ -12,10 +12,10 @@ interface Props {
 const { name, subtitle, github, linkedin, email } = Astro.props;
 ---
 
-<div>
-    <h1>{name}</h1>
-    <h2>{subtitle}</h2>
-    <nav>
+<div class="info">
+    <h1 class="elementofijo">{name}</h1>
+    <h2 class="elementofijo">{subtitle}</h2>
+    <nav class="elementofijo">
         <ul>
             <li>
                 <a href={github} target="_blank"><Github /></a>
@@ -31,7 +31,7 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
 </div>
 
 <style>
-    div {
+    .info {
         flex: 1;
         border-right: 1px solid rgba(255, 255, 255, 0.158);
 
@@ -54,10 +54,14 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
         text-align: center;
     }
 
-
     h2 {
         /* font-size: 1rem; */
         margin-bottom: 10px;
+    }
+
+    h2::selection {
+        color: white;
+        background-color: black;
     }
 
     ul {
@@ -71,20 +75,21 @@ const { name, subtitle, github, linkedin, email } = Astro.props;
     }
 
     @media screen and (max-width: 1160px) {
-    div {
-        border-right: 0;        
-        border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+        .info {
+            border-right: 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.158);
+        }
     }
 
     @media screen and (max-width: 1160px) {
-    ul {
-        margin-bottom: 8px;
+        ul {
+            margin-bottom: 8px;
+        }
     }
 
     @media screen and (max-width: 623px) {
-    h1 {
-        font-size: 6.5rem;
+        h1 {
+            font-size: 6.5rem;
+        }
     }
-
-
 </style>
