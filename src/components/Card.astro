@@ -25,15 +25,21 @@ const { title, description, tags, github, web } = Astro.props;
 				<p>{description}</p>
 			</>
 		)
+
+		
 	}
 
 	<div class="footer">
 		<div class="tags">{tags.map((tag) => <span>{tag}</span>)}</div>
 		<nav>
-			<ul>
-				<li>
-					<a href={github} target="_blank"><Github /></a>
-				</li>
+			<ul>	
+				{
+					github && (
+						<li>
+							<a href={github} target="_blank"><Github /></a>
+						</li>
+					)
+				}	
 				{
 					web && (
 						<li>
